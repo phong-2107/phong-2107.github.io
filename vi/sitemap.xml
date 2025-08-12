@@ -15,19 +15,6 @@
                 href="/vi/2-prerequiste/2.1-createec2/"
                 />
   </url><url>
-    <loc>/vi/1-introduce/</loc>
-    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/1-introduce/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/1-introduce/"
-                />
-  </url><url>
     <loc>/vi/3-accessibilitytoinstances/3.1-create-layer/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -39,6 +26,19 @@
                 rel="alternate"
                 hreflang="vi"
                 href="/vi/3-accessibilitytoinstances/3.1-create-layer/"
+                />
+  </url><url>
+    <loc>/vi/1-introduce/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-introduce/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-introduce/"
                 />
   </url><url>
     <loc>/vi/2-prerequiste/2.1-createec2/2.1.1-createbucket/</loc>

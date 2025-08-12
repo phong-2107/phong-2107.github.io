@@ -1,5 +1,12 @@
 [
 {
+	"uri": "/3-accessibilitytoinstances/3.1-create-layer/",
+	"title": "Create Lambda Layer",
+	"tags": [],
+	"description": "",
+	"content": "Create a Lambda Layer In this step, we will create a Lambda Layer to package the required libraries and dependencies (e.g., pandas, pyarrow) for the Lambda function.\nSteps to follow: Prepare the ZIP package\nThe root directory inside the ZIP file must follow the structure: python/lib/python3.11/site-packages/... This ZIP file should contain the necessary libraries (pandas, pyarrow). Example of the folder structure inside the ZIP file:\nCreate the Lambda Layer in the AWS Console\nGo to AWS Console → Lambda → Layers → Create layer.\nName: layer-pandas-pyarrow. Upload the file layer-x86_64.zip. Compatible runtimes: Select Python 3.11. Click Create to complete the process.\n"
+},
+{
 	"uri": "/2-prerequiste/2.1-createec2/2.1.1-createbucket/",
 	"title": "Create S3 Bucket",
 	"tags": [],
@@ -12,13 +19,6 @@
 	"tags": [],
 	"description": "",
 	"content": "In this step, we will need to create an S3 Bucket to store both raw data and processed data. The S3 Bucket will serve as the location where the Lambda function reads and writes data during the file processing pipeline.\nAfter creating the S3 Bucket, you will configure the necessary access permissions for the relevant AWS services (e.g., AWS Lambda) to ensure that these services can access and manipulate the data stored in S3.\nOverview of the data storage architecture:\nS3 Raw Bucket: Stores raw data before processing (e.g., logs from the system). S3 Processed Bucket: Stores data after it has been processed and converted. To learn how to create and configure an S3 Bucket, you can refer to the AWS documentation:\nIntroduction to Amazon S3 Content Create S3 Bucket Configure Access Permissions Create Folders in S3 "
-},
-{
-	"uri": "/3-accessibilitytoinstances/3.1-create-layer/",
-	"title": "Tạo Lambda Function để xử lý dữ liệu",
-	"tags": [],
-	"description": "",
-	"content": "Tạo Lambda layer Trong bước này, chúng ta sẽ tạo một Lambda layer có nhiệm vụ đóng gói thư viện, dependencies cần thiết cho Lambda function.\nCác bước thực hiện: Truy cập AWS Lambda Console:\nMở AWS Lambda Console tại Lambda Console. Chọn Layers ở menu bên trái Click Create function. Chọn cấu hình cho Lambda:\nAuthor from scratch. Function name: Nhập tên Lambda, ví dụ: process-file-lambda. Runtime: Chọn Python 3.11 Role: Chọn Create a new role with basic Lambda permissions. Gán quyền truy cập cho Lambda:\nLambda sẽ cần quyền truy cập vào S3 để đọc và ghi dữ liệu. Vì vậy, bạn sẽ gán IAM Role cho Lambda: Attach policies: Chọn AWSLambdaBasicExecutionRole để cấp quyền ghi log vào CloudWatch. Create custom policy: Chọn S3ReadWritePolicy để Lambda có quyền truy cập vào S3 Raw Bucket và S3 Processed Bucket. Bạn có thể tạo một policy mới như sau: { \u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;, \u0026#34;Statement\u0026#34;: [ { \u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;, \u0026#34;Action\u0026#34;: [\u0026#34;s3:GetObject\u0026#34;, \u0026#34;s3:PutObject\u0026#34;, \u0026#34;s3:ListBucket\u0026#34;], \u0026#34;Resource\u0026#34;: [ \u0026#34;arn:aws:s3:::edu-logs-raw-*\u0026#34;, \u0026#34;arn:aws:s3:::edu-logs-processed-*\u0026#34; ] } ] } Viết mã Lambda Function: Sau khi tạo Lambda function, bạn sẽ cần thêm mã nguồn để xử lý dữ liệu: import json import boto3 import pandas as pd import pyarrow.parquet as pq import pyarrow as pa from io import BytesIO def lambda_handler(event, context): # Lấy thông tin về bucket và file từ sự kiện S3 bucket = event[\u0026#39;Records\u0026#39;][0][\u0026#39;s3\u0026#39;][\u0026#39;bucket\u0026#39;][\u0026#39;name\u0026#39;] key = event[\u0026#39;Records\u0026#39;][0][\u0026#39;s3\u0026#39;][\u0026#39;object\u0026#39;][\u0026#39;key\u0026#39;] # Kết nối với S3 s3 = boto3.client(\u0026#39;s3\u0026#39;) # Tải dữ liệu từ S3 Raw Bucket response = s3.get_object(Bucket=bucket, Key=key) file_content = response[\u0026#39;Body\u0026#39;].read() # Đọc dữ liệu CSV/JSON if key.endswith(\u0026#39;.csv\u0026#39;): df = pd.read_csv(BytesIO(file_content)) elif key.endswith(\u0026#39;.json\u0026#39;): df = pd.read_json(BytesIO(file_content)) # Chuyển đổi dữ liệu sang Parquet table = pa.Table.from_pandas(df) buffer = BytesIO() pq.write_table(table, buffer) # Lưu dữ liệu Parquet vào S3 Processed Bucket processed_bucket = \u0026#39;edu-logs-processed-youraccount\u0026#39; processed_key = key.replace(\u0026#34;raw\u0026#34;, \u0026#34;processed\u0026#34;).replace(\u0026#34;.csv\u0026#34;, \u0026#34;.parquet\u0026#34;).replace(\u0026#34;.json\u0026#34;, \u0026#34;.parquet\u0026#34;) s3.put_object(Bucket=processed_bucket, Key=processed_key, Body=buffer.getvalue()) return { \u0026#39;statusCode\u0026#39;: 200, \u0026#39;body\u0026#39;: json.dumps(f\u0026#39;File {key} processed and saved as {processed_key}\u0026#39;) } Kiểm tra và deploy Lambda: Sau khi viết mã, click Deploy để triển khai Lambda function. Bạn có thể kiểm tra Lambda bằng cách sử dụng Test trong Lambda Console hoặc thông qua sự kiện S3 mà chúng ta sẽ cấu hình ở bước tiếp theo. "
 },
 {
 	"uri": "/1-introduce/",
@@ -50,10 +50,10 @@
 },
 {
 	"uri": "/3-accessibilitytoinstances/3.2-create-lambda/",
-	"title": "Create a Lambda Function for Data Processing",
+	"title": "Create Lambda Function for Data Processing",
 	"tags": [],
 	"description": "",
-	"content": "Create a Lambda Function for Data Processing In this step, we will create a Lambda Function that processes and converts data from CSV or JSON format into Parquet, then stores the processed data in the S3 Processed Bucket.\nSteps to follow: Access the AWS Lambda Console:\nOpen the AWS Lambda Console at Lambda Console. Click Create function.\nConfigure the Lambda function:\nAuthor from scratch. Function name: Enter the Lambda name: process-edu-logs. Runtime: Select Python 3.11. Architecture: Select x86_64.\nSet Permissions for Lambda:\nExecution role: Select Use an existing role. Search for and select: lambda-edu-log-role. Click Create function.\n"
+	"content": "Create Lambda Function for Data Processing In this step, we will create a Lambda Function to process and convert data from CSV or JSON format into Parquet, then store the processed data in the S3 Processed Bucket.\nSteps to follow: Access AWS Lambda Console:\nOpen the AWS Lambda Console at Lambda Console. Click Create function.\nConfigure the Lambda Function:\nAuthor from scratch. Function name: Enter process-edu-logs. Runtime: Select Python 3.11. Architecture: Select x86_64.\nSelect Permissions for Lambda:\nExecution role: Choose Use an existing role. Search for and select lambda-edu-log-role. Click Create function.\n"
 },
 {
 	"uri": "/2-prerequiste/",

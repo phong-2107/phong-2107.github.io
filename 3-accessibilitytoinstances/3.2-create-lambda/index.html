@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Create a Lambda Function for Data Processing :: AWS System Manager</title>
+    <title>Create Lambda Function for Data Processing :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1755006736" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1755006736" rel="stylesheet">
-    <link href="/css/hybrid.css?1755006736" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1755006736" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1755006736" rel="stylesheet">
-    <link href="/css/auto-complete.css?1755006736" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1755006736" rel="stylesheet">
-    <link href="/css/theme.css?1755006736" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1755006736" rel="stylesheet">
+    <link href="/css/nucleus.css?1755009607" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1755009607" rel="stylesheet">
+    <link href="/css/hybrid.css?1755009607" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1755009607" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1755009607" rel="stylesheet">
+    <link href="/css/auto-complete.css?1755009607" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1755009607" rel="stylesheet">
+    <link href="/css/theme.css?1755009607" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1755009607" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1755006736" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1755009607" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1755006736"></script>
+    <script src="/js/jquery-3.3.1.min.js?1755009607"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,8 +59,8 @@
 
 
 
-<script type="text/javascript" src="/%20js/lunr.min.js?1755006736"></script>
-<script type="text/javascript" src="/%20js/auto-complete.js?1755006736"></script>
+<script type="text/javascript" src="/%20js/lunr.min.js?1755009607"></script>
+<script type="text/javascript" src="/%20js/auto-complete.js?1755009607"></script>
 
 <script type="text/javascript">
     { { if hugo.IsMultilingual } }
@@ -70,7 +70,7 @@
     { { end } }
 </script>
 
-<script type="text/javascript" src="/%20js/search.js?1755006736"></script>
+<script type="text/javascript" src="/%20js/search.js?1755009607"></script>
     
   </div>
 
@@ -362,13 +362,13 @@
 
 
 
-<li data-nav-id="/3-accessibilitytoinstances/3.1-create-layer/" title="Tạo Lambda Function để xử lý dữ liệu" class="dd-item 
+<li data-nav-id="/3-accessibilitytoinstances/3.1-create-layer/" title="Create Lambda Layer" class="dd-item 
         
         
         
         ">
   <a href="/3-accessibilitytoinstances/3.1-create-layer/">
-     <b> 3.1 </b> Tạo Lambda Function để xử lý dữ liệu
+     <b> 3.1 </b> Create Lambda Layer
     
     <i class="fas fa-check read-icon"></i>
     
@@ -390,13 +390,13 @@
 
 
 
-<li data-nav-id="/3-accessibilitytoinstances/3.2-create-lambda/" title="Create a Lambda Function for Data Processing" class="dd-item 
+<li data-nav-id="/3-accessibilitytoinstances/3.2-create-lambda/" title="Create Lambda Function for Data Processing" class="dd-item 
         
         active
         
         ">
   <a href="/3-accessibilitytoinstances/3.2-create-lambda/">
-     <b> 3.2 </b> Create a Lambda Function for Data Processing
+     <b> 3.2 </b> Create Lambda Function for Data Processing
     
     <i class="fas fa-check read-icon"></i>
     
@@ -722,7 +722,7 @@
             
           
           
-            <a href='/'>Serverless File Processing with Amazon Athena and AWS Lambda</a> > <a href='/3-accessibilitytoinstances/'>Data Processing and Transformation with AWS Lambda</a> > Create a Lambda Function for Data Processing
+            <a href='/'>Serverless File Processing with Amazon Athena and AWS Lambda</a> > <a href='/3-accessibilitytoinstances/'>Data Processing and Transformation with AWS Lambda</a> > Create Lambda Function for Data Processing
           
         
           
@@ -739,7 +739,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#create-a-lambda-function-for-data-processing">Create a Lambda Function for Data Processing</a></li>
+        <li><a href="#create-lambda-function-for-data-processing">Create Lambda Function for Data Processing</a></li>
       </ul>
     </li>
   </ul>
@@ -759,7 +759,7 @@
           
             <h1>
               
-              Create a Lambda Function for Data Processing
+              Create Lambda Function for Data Processing
             </h1>
           
 
@@ -767,12 +767,12 @@
 
 
 
-	<h3 id="create-a-lambda-function-for-data-processing">Create a Lambda Function for Data Processing</h3>
-<p>In this step, we will create a <strong>Lambda Function</strong> that processes and converts data from <strong>CSV</strong> or <strong>JSON</strong> format into <strong>Parquet</strong>, then stores the processed data in the <strong>S3 Processed Bucket</strong>.</p>
+	<h3 id="create-lambda-function-for-data-processing">Create Lambda Function for Data Processing</h3>
+<p>In this step, we will create a <strong>Lambda Function</strong> to process and convert data from <strong>CSV</strong> or <strong>JSON</strong> format into <strong>Parquet</strong>, then store the processed data in the <strong>S3 Processed Bucket</strong>.</p>
 <h4 id="steps-to-follow">Steps to follow:</h4>
 <ol>
 <li>
-<p><strong>Access the AWS Lambda Console</strong>:</p>
+<p><strong>Access AWS Lambda Console</strong>:</p>
 <ul>
 <li>Open the <strong>AWS Lambda Console</strong> at <a href="https://console.aws.amazon.com/lambda/">Lambda Console</a>.</li>
 <li>Click <strong>Create function</strong>.<br>
@@ -780,20 +780,20 @@
 </ul>
 </li>
 <li>
-<p><strong>Configure the Lambda function</strong>:</p>
+<p><strong>Configure the Lambda Function</strong>:</p>
 <ul>
 <li><strong>Author from scratch</strong>.</li>
-<li><strong>Function name</strong>: Enter the Lambda name: <code>process-edu-logs</code>.</li>
+<li><strong>Function name</strong>: Enter <code>process-edu-logs</code>.</li>
 <li><strong>Runtime</strong>: Select <strong>Python 3.11</strong>.</li>
 <li><strong>Architecture</strong>: Select <strong>x86_64</strong>.<br>
 <img src="/images/3.connect/002-create-lambda.png" alt="Create Lambda"></li>
 </ul>
 </li>
 <li>
-<p><strong>Set Permissions for Lambda</strong>:</p>
+<p><strong>Select Permissions for Lambda</strong>:</p>
 <ul>
-<li><strong>Execution role</strong>: Select <strong>Use an existing role</strong>.</li>
-<li>Search for and select: <code>lambda-edu-log-role</code>.</li>
+<li><strong>Execution role</strong>: Choose <strong>Use an existing role</strong>.</li>
+<li>Search for and select <code>lambda-edu-log-role</code>.</li>
 <li>Click <strong>Create function</strong>.<br>
 <img src="/images/3.connect/003-create-lambda.png" alt="Create Lambda"></li>
 </ul>
@@ -1132,7 +1132,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/3-accessibilitytoinstances/3.1-create-layer/" title="Tạo Lambda Function để xử lý dữ liệu"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/3-accessibilitytoinstances/3.1-create-layer/" title="Create Lambda Layer"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/3-accessibilitytoinstances/3.3-config-lambda/" title="Configure Lambda" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -1145,19 +1145,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1755006736"></script>
-    <script src="/js/perfect-scrollbar.min.js?1755006736"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1755006736"></script>
-    <script src="/js/jquery.sticky.js?1755006736"></script>
-    <script src="/js/featherlight.min.js?1755006736"></script>
-    <script src="/js/highlight.pack.js?1755006736"></script>
+    <script src="/js/clipboard.min.js?1755009607"></script>
+    <script src="/js/perfect-scrollbar.min.js?1755009607"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1755009607"></script>
+    <script src="/js/jquery.sticky.js?1755009607"></script>
+    <script src="/js/featherlight.min.js?1755009607"></script>
+    <script src="/js/highlight.pack.js?1755009607"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1755006736"></script>
-    <script src="/js/learn.js?1755006736"></script>
-    <script src="/js/hugo-learn.js?1755006736"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1755009607"></script>
+    <script src="/js/learn.js?1755009607"></script>
+    <script src="/js/hugo-learn.js?1755009607"></script>
 
-    <link href="/mermaid/mermaid.css?1755006736" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1755006736"></script>
+    <link href="/mermaid/mermaid.css?1755009607" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1755009607"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
