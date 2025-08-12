@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.147.9">
@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Cấu hình AWS Glue Data Catalog và Crawler :: AWS System Manager</title>
+    <title>Configure AWS Glue Data Catalog and Crawler :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1755003183" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1755003183" rel="stylesheet">
-    <link href="/css/hybrid.css?1755003183" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1755003183" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1755003183" rel="stylesheet">
-    <link href="/css/auto-complete.css?1755003183" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1755003183" rel="stylesheet">
-    <link href="/css/theme.css?1755003183" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1755003183" rel="stylesheet">
+    <link href="/css/nucleus.css?1755006736" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1755006736" rel="stylesheet">
+    <link href="/css/hybrid.css?1755006736" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1755006736" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1755006736" rel="stylesheet">
+    <link href="/css/auto-complete.css?1755006736" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1755006736" rel="stylesheet">
+    <link href="/css/theme.css?1755006736" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1755006736" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1755003183" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1755006736" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1755003183"></script>
+    <script src="/js/jquery-3.3.1.min.js?1755006736"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,18 +59,18 @@
 
 
 
-<script type="text/javascript" src="/%20js/lunr.min.js?1755003183"></script>
-<script type="text/javascript" src="/%20js/auto-complete.js?1755003183"></script>
+<script type="text/javascript" src="/%20js/lunr.min.js?1755006736"></script>
+<script type="text/javascript" src="/%20js/auto-complete.js?1755006736"></script>
 
 <script type="text/javascript">
     { { if hugo.IsMultilingual } }
-    var baseurl = "\/\/localhost:1313\/";
+    var baseurl = "\/";
     { { else } }
-    var baseurl = "\/\/localhost:1313\/";
+    var baseurl = "\/";
     { { end } }
 </script>
 
-<script type="text/javascript" src="/%20js/search.js?1755003183"></script>
+<script type="text/javascript" src="/%20js/search.js?1755006736"></script>
     
   </div>
 
@@ -288,6 +288,34 @@
     
     
     
+    
+
+
+
+
+
+
+
+<li data-nav-id="/2-prerequiste/2.3-download/" title="Download Resources" class="dd-item 
+        
+        
+        
+        ">
+  <a href="/2-prerequiste/2.3-download/">
+     <b> 2.3 </b> Download Resources
+    
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+  
+  
+</li>
+
+
+
+    
+    
+    
   </ul>
   
 </li>
@@ -303,13 +331,13 @@
 
 
 
-<li data-nav-id="/3-accessibilitytoinstances/" title="Xử lý và chuyển đổi dữ liệu với AWS Lambda" class="dd-item 
+<li data-nav-id="/3-accessibilitytoinstances/" title="Data Processing and Transformation with AWS Lambda" class="dd-item 
         
         
         
         ">
   <a href="/3-accessibilitytoinstances/">
-     <b> 3. </b> Xử lý và chuyển đổi dữ liệu với AWS Lambda
+     <b> 3. </b> Data Processing and Transformation with AWS Lambda
     
     <i class="fas fa-check read-icon"></i>
     
@@ -362,13 +390,13 @@
 
 
 
-<li data-nav-id="/3-accessibilitytoinstances/3.2-create-lambda/" title="Tạo Lambda Function để xử lý dữ liệu" class="dd-item 
+<li data-nav-id="/3-accessibilitytoinstances/3.2-create-lambda/" title="Create a Lambda Function for Data Processing" class="dd-item 
         
         
         
         ">
   <a href="/3-accessibilitytoinstances/3.2-create-lambda/">
-     <b> 3.2 </b> Tạo Lambda Function để xử lý dữ liệu
+     <b> 3.2 </b> Create a Lambda Function for Data Processing
     
     <i class="fas fa-check read-icon"></i>
     
@@ -390,13 +418,13 @@
 
 
 
-<li data-nav-id="/3-accessibilitytoinstances/3.3-config-lambda/" title="Tạo Lambda Function để xử lý dữ liệu" class="dd-item 
+<li data-nav-id="/3-accessibilitytoinstances/3.3-config-lambda/" title="Configure Lambda" class="dd-item 
         
         
         
         ">
   <a href="/3-accessibilitytoinstances/3.3-config-lambda/">
-     <b> 3.3 </b> Tạo Lambda Function để xử lý dữ liệu
+     <b> 3.3 </b> Configure Lambda
     
     <i class="fas fa-check read-icon"></i>
     
@@ -418,13 +446,13 @@
 
 
 
-<li data-nav-id="/3-accessibilitytoinstances/3.4-upload-file/" title="Tạo Lambda Function để xử lý dữ liệu" class="dd-item 
+<li data-nav-id="/3-accessibilitytoinstances/3.4-upload-file/" title="Upload Sample Files to Test Lambda" class="dd-item 
         
         
         
         ">
   <a href="/3-accessibilitytoinstances/3.4-upload-file/">
-     <b> 3.3 </b> Tạo Lambda Function để xử lý dữ liệu
+     <b> 3.4 </b> Upload Sample Files to Test Lambda
     
     <i class="fas fa-check read-icon"></i>
     
@@ -453,13 +481,13 @@
 
 
 
-<li data-nav-id="/4-glue-crawler/" title="Cấu hình AWS Glue Data Catalog và Crawler" class="dd-item 
+<li data-nav-id="/4-glue-crawler/" title="Configure AWS Glue Data Catalog and Crawler" class="dd-item 
         
         active
         
         ">
   <a href="/4-glue-crawler/">
-     <b> 4. </b> Cấu hình AWS Glue Data Catalog và Crawler
+     <b> 4. </b> Configure AWS Glue Data Catalog and Crawler
     
     <i class="fas fa-check read-icon"></i>
     
@@ -479,13 +507,13 @@
 
 
 
-<li data-nav-id="/5-athena/" title="Truy vấn dữ liệu với Amazon Athena" class="dd-item 
+<li data-nav-id="/5-athena/" title="Query Data with Amazon Athena" class="dd-item 
         
         
         
         ">
   <a href="/5-athena/">
-     <b> 5. </b> Truy vấn dữ liệu với Amazon Athena
+     <b> 5. </b> Query Data with Amazon Athena
     
     <i class="fas fa-check read-icon"></i>
     
@@ -505,13 +533,13 @@
 
 
 
-<li data-nav-id="/6-cloudwatch/" title="Giám sát quy trình với Amazon CloudWatch" class="dd-item 
+<li data-nav-id="/6-cloudwatch/" title="Monitor the Workflow with Amazon CloudWatch" class="dd-item 
         
         
         
         ">
   <a href="/6-cloudwatch/">
-     <b> 6. </b> Giám sát quy trình với Amazon CloudWatch
+     <b> 6. </b> Monitor the Workflow with Amazon CloudWatch
     
     <i class="fas fa-check read-icon"></i>
     
@@ -531,39 +559,13 @@
 
 
 
-<li data-nav-id="/7-cleanup/" title="Dọn dẹp tài nguyên" class="dd-item 
+<li data-nav-id="/7-cleanup/" title="Clean Up Resources" class="dd-item 
         
         
         
         ">
   <a href="/7-cleanup/">
-     <b> 7. </b> Dọn dẹp tài nguyên
-    
-    <i class="fas fa-check read-icon"></i>
-    
-  </a>
-  
-  
-</li>
-
-
-
-      
-      
-
-
-
-
-
-
-
-<li data-nav-id="/section-name/" title="Section-Names" class="dd-item 
-        
-        
-        
-        ">
-  <a href="/section-name/">
-    Section-Names
+     <b> 7. </b> Clean Up Resources
     
     <i class="fas fa-check read-icon"></i>
     
@@ -610,7 +612,7 @@
                 
                 
                 
-                <option id="en" value="//localhost:1313/4-glue-crawler/" selected>English</option>
+                <option id="en" value="/4-glue-crawler/" selected>English</option>
                 
                 
                 
@@ -624,7 +626,7 @@
                 
                 
                 
-                <option id="vi" value="//localhost:1313/vi/4-glue-crawler/">Tiếng Việt
+                <option id="vi" value="/vi/4-glue-crawler/">Tiếng Việt
                 </option>
                 
                 
@@ -654,32 +656,35 @@
     <section id="footer">
       <left>
     
-     <b> Workshop</b> <br>
-    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
-     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
-    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
-     
+    <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0"
+        title="Migrate" Alt="web counter" border="0" /></a> <br>
+    <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0"
+        title="Total CLoud Journey" Alt="web counter" border="0" />
+
 </left>
 <left>
     <br>
     <br>
-        <b> Last Updated </b> <br>
-        <i><font color=orange>30-01-2022</font></i>
-    </left>
-    <left>
-        <br>
-        <br>
-            <b> Team </b> <br>
-           
-            <i> <a href="https://www.linkedin.com/in/sutrinh/"  style="color:orange">Sử Trịnh  </a> <br>
-                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
-                <a href="https://www.linkedin.com/in/hiepnguyendt"  style="color:orange">Thanh Hiệp </a>
-               
-        </i>
-        </left>
+    <b> Last Updated </b> <br>
+    <i>
+        <font color=orange>12-08-2025</font>
+    </i>
+</left>
+<left>
+    <br>
+    <br>
+    <b> Team </b> <br>
+
+    <i> <a href="https://www.linkedin.com/in/sutrinh/" style="color:orange">Sử Trịnh </a> <br>
+        <a href="https://www.linkedin.com/in/jotaguy" style="color:orange">Gia Hưng </a> <br>
+        <a href="https://www.linkedin.com/in/hiepnguyendt" style="color:orange">Thanh Hiệp </a>
+
+    </i>
+</left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
-
     </section>
   </div>
 </nav>
@@ -713,7 +718,7 @@
             
           
           
-            <a href='/'>Session Management</a> > Cấu hình AWS Glue Data Catalog và Crawler
+            <a href='/'>Serverless File Processing with Amazon Athena and AWS Lambda</a> > Configure AWS Glue Data Catalog and Crawler
           
         
           
@@ -726,15 +731,13 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#mục-tiêu">Mục tiêu</a></li>
-    <li><a href="#1-tạo-database-trong-glue-data-catalog">1) Tạo Database trong Glue Data Catalog</a></li>
-    <li><a href="#2-tạo-crawler-để-quét-s3-processed">2) Tạo Crawler để quét S3 Processed</a></li>
-    <li><a href="#3-chọniam-role-cho-crawler">3) Chọn/IAM Role cho Crawler</a></li>
-    <li><a href="#4-cấu-hình-output-database-tiền-tố-bảng-lịch-chạy">4) Cấu hình Output (Database, tiền tố bảng, lịch chạy)</a></li>
-    <li><a href="#5-chạy-crawler-lần-đầu">5) Chạy Crawler lần đầu</a></li>
-    <li><a href="#6-kiểm-tra-bảng--schema">6) Kiểm tra bảng &amp; schema</a></li>
-    <li><a href="#mẹo--lỗi-thường-gặp">Mẹo &amp; Lỗi thường gặp</a></li>
-    <li><a href="#kết-quả-mong-đợi">Kết quả mong đợi</a></li>
+    <li><a href="#objective">Objective</a></li>
+    <li><a href="#1-create-a-database-in-the-glue-data-catalog">1) Create a Database in the Glue Data Catalog</a></li>
+    <li><a href="#2-create-a-crawler-to-scan-the-s3-processed-bucket">2) Create a Crawler to Scan the S3 Processed Bucket</a></li>
+    <li><a href="#3-choose-an-iam-role-for-the-crawler">3) Choose an IAM Role for the Crawler</a></li>
+    <li><a href="#4-configure-output-database-table-prefix-schedule">4) Configure Output (Database, Table Prefix, Schedule)</a></li>
+    <li><a href="#5-run-the-crawler-for-the-first-time">5) Run the Crawler for the First Time</a></li>
+    <li><a href="#6-verify-the-table--schema">6) Verify the Table &amp; Schema</a></li>
   </ul>
 </nav>
     </div>
@@ -752,7 +755,7 @@
           
             <h1>
               
-              Cấu hình AWS Glue Data Catalog và Crawler
+              Configure AWS Glue Data Catalog and Crawler
             </h1>
           
 
@@ -760,159 +763,109 @@
 
 
 
-	<h2 id="mục-tiêu">Mục tiêu</h2>
+	<h2 id="objective">Objective</h2>
 <ul>
-<li>Tạo <strong>Database</strong> trong <strong>AWS Glue Data Catalog</strong> để lưu metadata (schema) cho dữ liệu đã xử lý.</li>
-<li>Tạo <strong>Crawler</strong> quét <strong>S3 Processed Bucket</strong> và tự động tạo/cập nhật <strong>Table</strong> trong Glue.</li>
-<li>Sau bước này, dữ liệu Parquet trong <code>edu-logs-processed-...</code> sẽ có bảng để truy vấn bằng <strong>Amazon Athena</strong>.</li>
+<li>Create a <strong>Database</strong> in the <strong>AWS Glue Data Catalog</strong> to store metadata (schema) for the processed data.</li>
+<li>Create a <strong>Crawler</strong> to scan the <strong>S3 Processed Bucket</strong> and automatically create/update a <strong>Table</strong> in Glue.</li>
+<li>After this step, the Parquet data in <code>edu-logs-processed-...</code> will be available as a table for querying with <strong>Amazon Athena</strong>.</li>
 </ul>
 <blockquote>
-<p><strong>Yêu cầu trước khi làm bước này</strong></p>
+<p><strong>Prerequisites</strong></p>
 <ul>
-<li>Lambda đã chạy và ghi file <strong>Parquet</strong> vào <code>s3://edu-logs-processed-&lt;your-unique-name&gt;/year=YYYY/month=MM/day=DD/...</code></li>
-<li>Bạn đã biết chính xác <strong>tên processed bucket</strong> của mình.</li>
+<li>The Lambda function has already run and written <strong>Parquet</strong> files to:
+<pre tabindex="0"><code>s3://edu-logs-processed-&lt;your-unique-name&gt;/year=YYYY/month=MM/day=DD/...
+</code></pre></li>
 </ul></blockquote>
 <hr>
-<h2 id="1-tạo-database-trong-glue-data-catalog">1) Tạo Database trong Glue Data Catalog</h2>
+<h2 id="1-create-a-database-in-the-glue-data-catalog">1) Create a Database in the Glue Data Catalog</h2>
 <ol>
-<li>Vào <strong>AWS Console</strong> → mở <strong>AWS Glue</strong></li>
-<li>Bên trái chọn <strong>Data Catalog → Databases</strong> → <strong>Create database</strong></li>
-<li>Điền:
+<li>In the <strong>AWS Console</strong>, open <strong>AWS Glue</strong>.<br>
+<img src="/images/4.glue/001-glue.png" alt="Crawler Output Config"></li>
+<li>On the left menu, select <strong>Data Catalog → Databases</strong> → <strong>Add database</strong>.<br>
+<img src="/images/4.glue/002-glue.png" alt="Crawler Output Config"></li>
+<li>Enter:
 <ul>
 <li><strong>Database name</strong>: <code>edu_logs_db</code></li>
-<li>Các mục khác giữ mặc định</li>
+<li>Keep other settings as default.</li>
 </ul>
 </li>
-<li>Nhấn <strong>Create database</strong></li>
+<li>Click <strong>Create database</strong>.<br>
+<img src="/images/4.glue/004-glue.png" alt="Create Glue Database"></li>
 </ol>
-<p><em>Hình minh họa (sẽ cập nhật)</em><br>
-<img src="/images/4.glue/001-create-database.png" alt="Create Glue Database"></p>
 <hr>
-<h2 id="2-tạo-crawler-để-quét-s3-processed">2) Tạo Crawler để quét S3 Processed</h2>
+<h2 id="2-create-a-crawler-to-scan-the-s3-processed-bucket">2) Create a Crawler to Scan the S3 Processed Bucket</h2>
 <ol>
 <li>
-<p>Trong <strong>AWS Glue</strong>, chọn <strong>Crawlers</strong> → <strong>Create crawler</strong></p>
+<p>In <strong>AWS Glue</strong>, go to <strong>Crawlers</strong> → <strong>Create crawler</strong>.<br>
+<img src="/images/4.glue/003-glue.png" alt="Create Glue Database"></p>
 </li>
 <li>
-<p><strong>Name</strong>: nhập tên dễ nhớ, ví dụ:</p>
+<p><strong>Name</strong>: Enter <code>crawler-edu-logs-processed</code>.</p>
+<ul>
+<li>Click <strong>Next</strong> to continue.<br>
+<img src="/images/4.glue/005-glue.png" alt="Create Glue Database"></li>
+</ul>
 </li>
 <li>
 <p><strong>Data sources</strong>:</p>
-</li>
-</ol>
 <ul>
-<li>Click <strong>Add a data source</strong> → chọn <strong>S3</strong></li>
-<li><strong>Include path</strong>: nhập đường dẫn bucket processed của bạn, ví dụ:
+<li>Click <strong>Add a data source</strong> → choose <strong>S3</strong>.</li>
+<li><strong>Include path</strong>: enter the processed bucket path:
 <pre tabindex="0"><code>s3://edu-logs-processed-&lt;your-unique-name&gt;/
 </code></pre></li>
-<li>Nhấn <strong>Add data source</strong></li>
-</ul>
-<ol start="4">
-<li><strong>Crawler source properties</strong> (tuỳ giao diện):</li>
-</ol>
-<ul>
-<li><strong>Recrawl behavior</strong>:
-<ul>
-<li>Lần đầu: chọn <strong>Recrawl all files</strong> (Full scan toàn bộ)</li>
-<li>Về sau có thể đổi sang <strong>Recrawl changed partitions only</strong> để nhanh &amp; rẻ hơn</li>
+<li>Click <strong>Add data source</strong>.<br>
+<img src="/images/4.glue/006-glue.png" alt="Create Glue Database"></li>
 </ul>
 </li>
-</ul>
-<p><em>Hình minh họa (sẽ cập nhật)</em><br>
-<img src="/images/4.glue/002-create-crawler.png" alt="Create Glue Crawler"></p>
+</ol>
 <hr>
-<h2 id="3-chọniam-role-cho-crawler">3) Chọn/IAM Role cho Crawler</h2>
+<h2 id="3-choose-an-iam-role-for-the-crawler">3) Choose an IAM Role for the Crawler</h2>
 <ol>
-<li>Ở bước <strong>Choose an IAM role</strong>:</li>
-</ol>
+<li>
+<p>In the <strong>Choose an IAM role</strong> step:</p>
 <ul>
-<li>Chọn <strong>Create new IAM role</strong> hoặc dùng role có sẵn</li>
-<li>Ví dụ đặt tên role:
-<pre tabindex="0"><code>AWSGlueServiceRole-edu
-</code></pre></li>
+<li>Select <strong>AWSGlueServiceRoleDefault</strong>.</li>
+<li>Click <strong>Next</strong>.<br>
+<img src="/images/4.glue/007-glue.png" alt="Create Glue Database"></li>
 </ul>
-<ol start="2">
-<li>Đảm bảo role này có quyền <strong>đọc</strong> từ <code>edu-logs-processed-...</code> (mặc định wizard sẽ tạo đủ quyền đọc S3 cho crawler).</li>
+</li>
+<li>
+<p>Ensure this role has <strong>read</strong> permissions for <code>edu-logs-processed-...</code> (the wizard will typically create the necessary S3 read permissions by default).</p>
+</li>
 </ol>
 <hr>
-<h2 id="4-cấu-hình-output-database-tiền-tố-bảng-lịch-chạy">4) Cấu hình Output (Database, tiền tố bảng, lịch chạy)</h2>
+<h2 id="4-configure-output-database-table-prefix-schedule">4) Configure Output (Database, Table Prefix, Schedule)</h2>
 <ol>
-<li><strong>Output</strong>:</li>
-</ol>
+<li><strong>Output</strong>:
 <ul>
-<li><strong>Target database</strong>: chọn <code>edu_logs_db</code></li>
-<li><strong>Table name prefix (optional)</strong>: điền <code>logs_</code> để bảng tạo ra có tiền tố dễ nhận biết (ví dụ <code>logs_edu_logs_processed</code>)</li>
+<li><strong>Target database</strong>: Select <code>edu_logs_db</code>.</li>
+<li><strong>Table name prefix (optional)</strong>: Enter <code>logs_</code> so that generated tables have a recognizable prefix (e.g., <code>logs_edu_logs_processed</code>).</li>
+<li><strong>Frequency</strong>: Select <strong>On demand</strong>.<br>
+<img src="/images/4.glue/008-glue.png" alt="Create Glue Database"></li>
 </ul>
-<ol start="2">
-<li><strong>Schedule</strong> (lịch chạy):</li>
+</li>
+<li><strong>Review</strong> → <strong>Create</strong> to create the crawler.<br>
+<img src="/images/4.glue/009-glue.png" alt="Create Glue Database"></li>
 </ol>
-<ul>
-<li>Chọn <strong>On demand</strong> (chạy tay khi cần)</li>
-<li><em>Hoặc</em> chọn <strong>Hourly</strong> nếu muốn crawler tự chạy mỗi giờ</li>
-</ul>
-<ol start="3">
-<li><strong>Review</strong> → <strong>Create</strong> để tạo crawler</li>
-</ol>
-<p><em>Hình minh họa (sẽ cập nhật)</em><br>
-<img src="/images/4.glue/003-output-config.png" alt="Crawler Output Config"></p>
 <hr>
-<h2 id="5-chạy-crawler-lần-đầu">5) Chạy Crawler lần đầu</h2>
+<h2 id="5-run-the-crawler-for-the-first-time">5) Run the Crawler for the First Time</h2>
 <ol>
-<li>Quay lại danh sách <strong>Crawlers</strong></li>
-<li>Chọn <code>crawler-edu-logs-processed</code> → nhấn <strong>Run crawler</strong></li>
-<li>Chờ trạng thái chạy <strong>Completed</strong> (tuỳ dữ liệu, vài chục giây đến vài phút)</li>
+<li>Go back to the <strong>Crawlers</strong> list.</li>
+<li>Select <code>crawler-edu-logs-processed</code> → click <strong>Run crawler</strong>.</li>
+<li>Wait until the status changes to <strong>Completed</strong> (this may take several seconds to a few minutes).<br>
+<img src="/images/4.glue/010-glue.png" alt="Create Glue Database"></li>
 </ol>
-<p><em>Hình minh họa (sẽ cập nhật)</em><br>
-<img src="/images/4.glue/004-run-crawler.png" alt="Run Crawler"></p>
 <hr>
-<h2 id="6-kiểm-tra-bảng--schema">6) Kiểm tra bảng &amp; schema</h2>
+<h2 id="6-verify-the-table--schema">6) Verify the Table &amp; Schema</h2>
 <ol>
-<li>Vào <strong>AWS Glue → Data Catalog → Tables</strong></li>
-<li>Bạn sẽ thấy bảng mới, ví dụ:</li>
-<li>Click vào bảng → tab <strong>Schema</strong> để xem các cột/kiểu dữ liệu có đúng kỳ vọng không</li>
-<li>Kiểm tra tab <strong>Location</strong> của bảng trỏ về thư mục:</li>
+<li>Go to <strong>AWS Glue → Data Catalog → Tables</strong>.</li>
+<li>You should see a newly created table:<br>
+<img src="/images/4.glue/011-glue.png" alt="Create Glue Database"></li>
+<li>Click the table → go to the <strong>Schema</strong> tab to review column names and data types.<br>
+<img src="/images/4.glue/012-glue.png" alt="Create Glue Database"></li>
+<li>Check the <strong>Location</strong> tab to ensure the table points to the correct folder path:<br>
+<img src="/images/4.glue/013-glue.png" alt="Create Glue Database"></li>
 </ol>
-<p><em>Hình minh họa (sẽ cập nhật)</em><br>
-<img src="/images/4.glue/005-check-schema.png" alt="Glue Table Schema"></p>
-<hr>
-<h2 id="mẹo--lỗi-thường-gặp">Mẹo &amp; Lỗi thường gặp</h2>
-<ul>
-<li>
-<p><strong>Không thấy bảng sau khi chạy</strong></p>
-</li>
-<li>
-<p>Kiểm tra trong <code>edu-logs-processed-...</code> đã có file <strong>Parquet</strong> hay chưa</p>
-</li>
-<li>
-<p>Đường dẫn <strong>Include path</strong> có đúng bucket/process prefix không</p>
-</li>
-<li>
-<p>Chạy lại crawler (<strong>Run crawler</strong>) sau khi đã có dữ liệu</p>
-</li>
-<li>
-<p><strong>Schema không đúng/thiếu cột</strong></p>
-</li>
-<li>
-<p>Khi format đầu vào thay đổi, hãy <strong>Run crawler</strong> lại để cập nhật</p>
-</li>
-<li>
-<p>Với partition <code>year/month/day</code>, khi query trên Athena nhớ <strong>lọc theo partition</strong> để nhanh &amp; rẻ</p>
-</li>
-<li>
-<p><strong>Crawler chạy lâu</strong></p>
-</li>
-<li>
-<p>Sau lần đầu (full scan), đổi <strong>Recrawl behavior</strong> sang <strong>Recrawl changed partitions only</strong></p>
-</li>
-</ul>
-<hr>
-<h2 id="kết-quả-mong-đợi">Kết quả mong đợi</h2>
-<ul>
-<li>Có <strong>Database</strong>: <code>edu_logs_db</code></li>
-<li>Có <strong>Table</strong> (ví dụ): <code>logs_edu_logs_processed</code> trỏ đến S3 processed</li>
-<li>Sẵn sàng chuyển sang <strong>Bước 5: Truy vấn bằng Amazon Athena</strong></li>
-</ul>
-<hr>
 
 
 
@@ -1064,6 +1017,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1081,38 +1050,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1146,6 +1083,38 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1173,22 +1142,6 @@
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1242,10 +1195,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/3-accessibilitytoinstances/3.4-upload-file/" title="Tạo Lambda Function để xử lý dữ liệu"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/3-accessibilitytoinstances/3.4-upload-file/" title="Upload Sample Files to Test Lambda"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/5-athena/" title="Truy vấn dữ liệu với Amazon Athena" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/5-athena/" title="Query Data with Amazon Athena" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1255,19 +1208,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1755003183"></script>
-    <script src="/js/perfect-scrollbar.min.js?1755003183"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1755003183"></script>
-    <script src="/js/jquery.sticky.js?1755003183"></script>
-    <script src="/js/featherlight.min.js?1755003183"></script>
-    <script src="/js/highlight.pack.js?1755003183"></script>
+    <script src="/js/clipboard.min.js?1755006736"></script>
+    <script src="/js/perfect-scrollbar.min.js?1755006736"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1755006736"></script>
+    <script src="/js/jquery.sticky.js?1755006736"></script>
+    <script src="/js/featherlight.min.js?1755006736"></script>
+    <script src="/js/highlight.pack.js?1755006736"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1755003183"></script>
-    <script src="/js/learn.js?1755003183"></script>
-    <script src="/js/hugo-learn.js?1755003183"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1755006736"></script>
+    <script src="/js/learn.js?1755006736"></script>
+    <script src="/js/hugo-learn.js?1755006736"></script>
 
-    <link href="/mermaid/mermaid.css?1755003183" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1755003183"></script>
+    <link href="/mermaid/mermaid.css?1755006736" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1755006736"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

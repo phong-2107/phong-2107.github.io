@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.147.9">
@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tạo Lambda Function để xử lý dữ liệu :: AWS System Manager</title>
+    <title>Create a Lambda Function for Data Processing :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1755003183" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1755003183" rel="stylesheet">
-    <link href="/css/hybrid.css?1755003183" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1755003183" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1755003183" rel="stylesheet">
-    <link href="/css/auto-complete.css?1755003183" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1755003183" rel="stylesheet">
-    <link href="/css/theme.css?1755003183" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1755003183" rel="stylesheet">
+    <link href="/css/nucleus.css?1755006736" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1755006736" rel="stylesheet">
+    <link href="/css/hybrid.css?1755006736" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1755006736" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1755006736" rel="stylesheet">
+    <link href="/css/auto-complete.css?1755006736" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1755006736" rel="stylesheet">
+    <link href="/css/theme.css?1755006736" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1755006736" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1755003183" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1755006736" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1755003183"></script>
+    <script src="/js/jquery-3.3.1.min.js?1755006736"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,18 +59,18 @@
 
 
 
-<script type="text/javascript" src="/%20js/lunr.min.js?1755003183"></script>
-<script type="text/javascript" src="/%20js/auto-complete.js?1755003183"></script>
+<script type="text/javascript" src="/%20js/lunr.min.js?1755006736"></script>
+<script type="text/javascript" src="/%20js/auto-complete.js?1755006736"></script>
 
 <script type="text/javascript">
     { { if hugo.IsMultilingual } }
-    var baseurl = "\/\/localhost:1313\/";
+    var baseurl = "\/";
     { { else } }
-    var baseurl = "\/\/localhost:1313\/";
+    var baseurl = "\/";
     { { end } }
 </script>
 
-<script type="text/javascript" src="/%20js/search.js?1755003183"></script>
+<script type="text/javascript" src="/%20js/search.js?1755006736"></script>
     
   </div>
 
@@ -288,6 +288,34 @@
     
     
     
+    
+
+
+
+
+
+
+
+<li data-nav-id="/2-prerequiste/2.3-download/" title="Download Resources" class="dd-item 
+        
+        
+        
+        ">
+  <a href="/2-prerequiste/2.3-download/">
+     <b> 2.3 </b> Download Resources
+    
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+  
+  
+</li>
+
+
+
+    
+    
+    
   </ul>
   
 </li>
@@ -303,13 +331,13 @@
 
 
 
-<li data-nav-id="/3-accessibilitytoinstances/" title="Xử lý và chuyển đổi dữ liệu với AWS Lambda" class="dd-item 
+<li data-nav-id="/3-accessibilitytoinstances/" title="Data Processing and Transformation with AWS Lambda" class="dd-item 
         parent
         
         
         ">
   <a href="/3-accessibilitytoinstances/">
-     <b> 3. </b> Xử lý và chuyển đổi dữ liệu với AWS Lambda
+     <b> 3. </b> Data Processing and Transformation with AWS Lambda
     
     <i class="fas fa-check read-icon"></i>
     
@@ -362,13 +390,13 @@
 
 
 
-<li data-nav-id="/3-accessibilitytoinstances/3.2-create-lambda/" title="Tạo Lambda Function để xử lý dữ liệu" class="dd-item 
+<li data-nav-id="/3-accessibilitytoinstances/3.2-create-lambda/" title="Create a Lambda Function for Data Processing" class="dd-item 
         
         active
         
         ">
   <a href="/3-accessibilitytoinstances/3.2-create-lambda/">
-     <b> 3.2 </b> Tạo Lambda Function để xử lý dữ liệu
+     <b> 3.2 </b> Create a Lambda Function for Data Processing
     
     <i class="fas fa-check read-icon"></i>
     
@@ -390,13 +418,13 @@
 
 
 
-<li data-nav-id="/3-accessibilitytoinstances/3.3-config-lambda/" title="Tạo Lambda Function để xử lý dữ liệu" class="dd-item 
+<li data-nav-id="/3-accessibilitytoinstances/3.3-config-lambda/" title="Configure Lambda" class="dd-item 
         
         
         
         ">
   <a href="/3-accessibilitytoinstances/3.3-config-lambda/">
-     <b> 3.3 </b> Tạo Lambda Function để xử lý dữ liệu
+     <b> 3.3 </b> Configure Lambda
     
     <i class="fas fa-check read-icon"></i>
     
@@ -418,13 +446,13 @@
 
 
 
-<li data-nav-id="/3-accessibilitytoinstances/3.4-upload-file/" title="Tạo Lambda Function để xử lý dữ liệu" class="dd-item 
+<li data-nav-id="/3-accessibilitytoinstances/3.4-upload-file/" title="Upload Sample Files to Test Lambda" class="dd-item 
         
         
         
         ">
   <a href="/3-accessibilitytoinstances/3.4-upload-file/">
-     <b> 3.3 </b> Tạo Lambda Function để xử lý dữ liệu
+     <b> 3.4 </b> Upload Sample Files to Test Lambda
     
     <i class="fas fa-check read-icon"></i>
     
@@ -453,13 +481,13 @@
 
 
 
-<li data-nav-id="/4-glue-crawler/" title="Cấu hình AWS Glue Data Catalog và Crawler" class="dd-item 
+<li data-nav-id="/4-glue-crawler/" title="Configure AWS Glue Data Catalog and Crawler" class="dd-item 
         
         
         
         ">
   <a href="/4-glue-crawler/">
-     <b> 4. </b> Cấu hình AWS Glue Data Catalog và Crawler
+     <b> 4. </b> Configure AWS Glue Data Catalog and Crawler
     
     <i class="fas fa-check read-icon"></i>
     
@@ -479,13 +507,13 @@
 
 
 
-<li data-nav-id="/5-athena/" title="Truy vấn dữ liệu với Amazon Athena" class="dd-item 
+<li data-nav-id="/5-athena/" title="Query Data with Amazon Athena" class="dd-item 
         
         
         
         ">
   <a href="/5-athena/">
-     <b> 5. </b> Truy vấn dữ liệu với Amazon Athena
+     <b> 5. </b> Query Data with Amazon Athena
     
     <i class="fas fa-check read-icon"></i>
     
@@ -505,13 +533,13 @@
 
 
 
-<li data-nav-id="/6-cloudwatch/" title="Giám sát quy trình với Amazon CloudWatch" class="dd-item 
+<li data-nav-id="/6-cloudwatch/" title="Monitor the Workflow with Amazon CloudWatch" class="dd-item 
         
         
         
         ">
   <a href="/6-cloudwatch/">
-     <b> 6. </b> Giám sát quy trình với Amazon CloudWatch
+     <b> 6. </b> Monitor the Workflow with Amazon CloudWatch
     
     <i class="fas fa-check read-icon"></i>
     
@@ -531,39 +559,13 @@
 
 
 
-<li data-nav-id="/7-cleanup/" title="Dọn dẹp tài nguyên" class="dd-item 
+<li data-nav-id="/7-cleanup/" title="Clean Up Resources" class="dd-item 
         
         
         
         ">
   <a href="/7-cleanup/">
-     <b> 7. </b> Dọn dẹp tài nguyên
-    
-    <i class="fas fa-check read-icon"></i>
-    
-  </a>
-  
-  
-</li>
-
-
-
-      
-      
-
-
-
-
-
-
-
-<li data-nav-id="/section-name/" title="Section-Names" class="dd-item 
-        
-        
-        
-        ">
-  <a href="/section-name/">
-    Section-Names
+     <b> 7. </b> Clean Up Resources
     
     <i class="fas fa-check read-icon"></i>
     
@@ -610,7 +612,7 @@
                 
                 
                 
-                <option id="en" value="//localhost:1313/3-accessibilitytoinstances/3.2-create-lambda/" selected>English</option>
+                <option id="en" value="/3-accessibilitytoinstances/3.2-create-lambda/" selected>English</option>
                 
                 
                 
@@ -624,7 +626,7 @@
                 
                 
                 
-                <option id="vi" value="//localhost:1313/vi/3-accessibilitytoinstances/3.2-create-lambda/">Tiếng Việt
+                <option id="vi" value="/vi/3-accessibilitytoinstances/3.2-create-lambda/">Tiếng Việt
                 </option>
                 
                 
@@ -654,32 +656,35 @@
     <section id="footer">
       <left>
     
-     <b> Workshop</b> <br>
-    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
-     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
-    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
-     
+    <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0"
+        title="Migrate" Alt="web counter" border="0" /></a> <br>
+    <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0"
+        title="Total CLoud Journey" Alt="web counter" border="0" />
+
 </left>
 <left>
     <br>
     <br>
-        <b> Last Updated </b> <br>
-        <i><font color=orange>30-01-2022</font></i>
-    </left>
-    <left>
-        <br>
-        <br>
-            <b> Team </b> <br>
-           
-            <i> <a href="https://www.linkedin.com/in/sutrinh/"  style="color:orange">Sử Trịnh  </a> <br>
-                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
-                <a href="https://www.linkedin.com/in/hiepnguyendt"  style="color:orange">Thanh Hiệp </a>
-               
-        </i>
-        </left>
+    <b> Last Updated </b> <br>
+    <i>
+        <font color=orange>12-08-2025</font>
+    </i>
+</left>
+<left>
+    <br>
+    <br>
+    <b> Team </b> <br>
+
+    <i> <a href="https://www.linkedin.com/in/sutrinh/" style="color:orange">Sử Trịnh </a> <br>
+        <a href="https://www.linkedin.com/in/jotaguy" style="color:orange">Gia Hưng </a> <br>
+        <a href="https://www.linkedin.com/in/hiepnguyendt" style="color:orange">Thanh Hiệp </a>
+
+    </i>
+</left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
-
     </section>
   </div>
 </nav>
@@ -717,7 +722,7 @@
             
           
           
-            <a href='/'>Session Management</a> > <a href='/3-accessibilitytoinstances/'>Xử lý và chuyển đổi dữ liệu với AWS Lambda</a> > Tạo Lambda Function để xử lý dữ liệu
+            <a href='/'>Serverless File Processing with Amazon Athena and AWS Lambda</a> > <a href='/3-accessibilitytoinstances/'>Data Processing and Transformation with AWS Lambda</a> > Create a Lambda Function for Data Processing
           
         
           
@@ -734,7 +739,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#tạo-lambda-function-để-xử-lý-dữ-liệu">Tạo Lambda Function để xử lý dữ liệu</a></li>
+        <li><a href="#create-a-lambda-function-for-data-processing">Create a Lambda Function for Data Processing</a></li>
       </ul>
     </li>
   </ul>
@@ -754,7 +759,7 @@
           
             <h1>
               
-              Tạo Lambda Function để xử lý dữ liệu
+              Create a Lambda Function for Data Processing
             </h1>
           
 
@@ -762,105 +767,35 @@
 
 
 
-	<h3 id="tạo-lambda-function-để-xử-lý-dữ-liệu">Tạo Lambda Function để xử lý dữ liệu</h3>
-<p>Trong bước này, chúng ta sẽ tạo một <strong>Lambda Function</strong> có nhiệm vụ xử lý và chuyển đổi dữ liệu từ định dạng <strong>CSV</strong> hoặc <strong>JSON</strong> sang <strong>Parquet</strong> và lưu trữ dữ liệu đã xử lý vào <strong>S3 Processed Bucket</strong>.</p>
-<h4 id="các-bước-thực-hiện">Các bước thực hiện:</h4>
+	<h3 id="create-a-lambda-function-for-data-processing">Create a Lambda Function for Data Processing</h3>
+<p>In this step, we will create a <strong>Lambda Function</strong> that processes and converts data from <strong>CSV</strong> or <strong>JSON</strong> format into <strong>Parquet</strong>, then stores the processed data in the <strong>S3 Processed Bucket</strong>.</p>
+<h4 id="steps-to-follow">Steps to follow:</h4>
 <ol>
 <li>
-<p><strong>Truy cập AWS Lambda Console</strong>:</p>
+<p><strong>Access the AWS Lambda Console</strong>:</p>
 <ul>
-<li>Mở <strong>AWS Lambda Console</strong> tại <a href="https://console.aws.amazon.com/lambda/">Lambda Console</a>.</li>
-<li>Click <strong>Create function</strong>.
+<li>Open the <strong>AWS Lambda Console</strong> at <a href="https://console.aws.amazon.com/lambda/">Lambda Console</a>.</li>
+<li>Click <strong>Create function</strong>.<br>
 <img src="/images/3.connect/001-create-lambda.png" alt="Create Lambda"></li>
 </ul>
 </li>
 <li>
-<p><strong>Chọn cấu hình cho Lambda</strong>:</p>
+<p><strong>Configure the Lambda function</strong>:</p>
 <ul>
 <li><strong>Author from scratch</strong>.</li>
-<li><strong>Function name</strong>: Nhập tên Lambda, ví dụ: <code>process-file-lambda</code>.</li>
-<li><strong>Runtime</strong>: Chọn <strong>Python 3.11</strong></li>
-<li><strong>Role</strong>: Chọn <strong>Create a new role with basic Lambda permissions</strong>.</li>
+<li><strong>Function name</strong>: Enter the Lambda name: <code>process-edu-logs</code>.</li>
+<li><strong>Runtime</strong>: Select <strong>Python 3.11</strong>.</li>
+<li><strong>Architecture</strong>: Select <strong>x86_64</strong>.<br>
+<img src="/images/3.connect/002-create-lambda.png" alt="Create Lambda"></li>
 </ul>
-<p><img src="/images/3.prerequisite/001-create-lambda.png" alt="Create Lambda"></p>
 </li>
 <li>
-<p><strong>Gán quyền truy cập cho Lambda</strong>:</p>
+<p><strong>Set Permissions for Lambda</strong>:</p>
 <ul>
-<li>Lambda sẽ cần quyền truy cập vào <strong>S3</strong> để đọc và ghi dữ liệu. Vì vậy, bạn sẽ gán IAM Role cho Lambda:
-<ul>
-<li><strong>Attach policies</strong>: Chọn <strong>AWSLambdaBasicExecutionRole</strong> để cấp quyền ghi log vào CloudWatch.</li>
-<li><strong>Create custom policy</strong>: Chọn <strong>S3ReadWritePolicy</strong> để Lambda có quyền truy cập vào <strong>S3 Raw Bucket</strong> và <strong>S3 Processed Bucket</strong>. Bạn có thể tạo một policy mới như sau:</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Statement&#34;</span>: [
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Action&#34;</span>: [<span style="color:#e6db74">&#34;s3:GetObject&#34;</span>, <span style="color:#e6db74">&#34;s3:PutObject&#34;</span>, <span style="color:#e6db74">&#34;s3:ListBucket&#34;</span>],
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Resource&#34;</span>: [
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;arn:aws:s3:::edu-logs-raw-*&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;arn:aws:s3:::edu-logs-processed-*&#34;</span>
-</span></span><span style="display:flex;"><span>      ]
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  ]
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><ol start="4">
-<li><strong>Viết mã Lambda Function</strong>:
-<ul>
-<li>Sau khi tạo Lambda function, bạn sẽ cần thêm mã nguồn để xử lý dữ liệu:</li>
-</ul>
-</li>
-</ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> json
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> boto3
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pyarrow.parquet <span style="color:#66d9ef">as</span> pq
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pyarrow <span style="color:#66d9ef">as</span> pa
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> io <span style="color:#f92672">import</span> BytesIO
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lambda_handler</span>(event, context):
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Lấy thông tin về bucket và file từ sự kiện S3</span>
-</span></span><span style="display:flex;"><span>    bucket <span style="color:#f92672">=</span> event[<span style="color:#e6db74">&#39;Records&#39;</span>][<span style="color:#ae81ff">0</span>][<span style="color:#e6db74">&#39;s3&#39;</span>][<span style="color:#e6db74">&#39;bucket&#39;</span>][<span style="color:#e6db74">&#39;name&#39;</span>]
-</span></span><span style="display:flex;"><span>    key <span style="color:#f92672">=</span> event[<span style="color:#e6db74">&#39;Records&#39;</span>][<span style="color:#ae81ff">0</span>][<span style="color:#e6db74">&#39;s3&#39;</span>][<span style="color:#e6db74">&#39;object&#39;</span>][<span style="color:#e6db74">&#39;key&#39;</span>]
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Kết nối với S3</span>
-</span></span><span style="display:flex;"><span>    s3 <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(<span style="color:#e6db74">&#39;s3&#39;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Tải dữ liệu từ S3 Raw Bucket</span>
-</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> s3<span style="color:#f92672">.</span>get_object(Bucket<span style="color:#f92672">=</span>bucket, Key<span style="color:#f92672">=</span>key)
-</span></span><span style="display:flex;"><span>    file_content <span style="color:#f92672">=</span> response[<span style="color:#e6db74">&#39;Body&#39;</span>]<span style="color:#f92672">.</span>read()
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Đọc dữ liệu CSV/JSON</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> key<span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;.csv&#39;</span>):
-</span></span><span style="display:flex;"><span>        df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(BytesIO(file_content))
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> key<span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;.json&#39;</span>):
-</span></span><span style="display:flex;"><span>        df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(BytesIO(file_content))
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Chuyển đổi dữ liệu sang Parquet</span>
-</span></span><span style="display:flex;"><span>    table <span style="color:#f92672">=</span> pa<span style="color:#f92672">.</span>Table<span style="color:#f92672">.</span>from_pandas(df)
-</span></span><span style="display:flex;"><span>    buffer <span style="color:#f92672">=</span> BytesIO()
-</span></span><span style="display:flex;"><span>    pq<span style="color:#f92672">.</span>write_table(table, buffer)
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Lưu dữ liệu Parquet vào S3 Processed Bucket</span>
-</span></span><span style="display:flex;"><span>    processed_bucket <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;edu-logs-processed-youraccount&#39;</span>
-</span></span><span style="display:flex;"><span>    processed_key <span style="color:#f92672">=</span> key<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34;raw&#34;</span>, <span style="color:#e6db74">&#34;processed&#34;</span>)<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34;.csv&#34;</span>, <span style="color:#e6db74">&#34;.parquet&#34;</span>)<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34;.json&#34;</span>, <span style="color:#e6db74">&#34;.parquet&#34;</span>)
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    s3<span style="color:#f92672">.</span>put_object(Bucket<span style="color:#f92672">=</span>processed_bucket, Key<span style="color:#f92672">=</span>processed_key, Body<span style="color:#f92672">=</span>buffer<span style="color:#f92672">.</span>getvalue())
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">200</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;body&#39;</span>: json<span style="color:#f92672">.</span>dumps(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;File </span><span style="color:#e6db74">{</span>key<span style="color:#e6db74">}</span><span style="color:#e6db74"> processed and saved as </span><span style="color:#e6db74">{</span>processed_key<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span></code></pre></div><ol start="5">
-<li><strong>Kiểm tra và deploy Lambda</strong>:
-<ul>
-<li>Sau khi viết mã, click Deploy để triển khai Lambda function.</li>
-<li>Bạn có thể kiểm tra Lambda bằng cách sử dụng Test trong Lambda Console hoặc thông qua sự kiện S3 mà chúng ta sẽ cấu hình ở bước tiếp theo.</li>
+<li><strong>Execution role</strong>: Select <strong>Use an existing role</strong>.</li>
+<li>Search for and select: <code>lambda-edu-log-role</code>.</li>
+<li>Click <strong>Create function</strong>.<br>
+<img src="/images/3.connect/003-create-lambda.png" alt="Create Lambda"></li>
 </ul>
 </li>
 </ol>
@@ -1015,6 +950,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1033,42 +984,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1094,6 +1009,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1104,6 +1020,22 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -1120,6 +1052,9 @@
                     
                     
 
+                    
+            
+        
                     
             
         
@@ -1200,7 +1135,7 @@
 			<a class="nav nav-prev" href="/3-accessibilitytoinstances/3.1-create-layer/" title="Tạo Lambda Function để xử lý dữ liệu"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/3-accessibilitytoinstances/3.3-config-lambda/" title="Tạo Lambda Function để xử lý dữ liệu" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/3-accessibilitytoinstances/3.3-config-lambda/" title="Configure Lambda" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1210,19 +1145,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1755003183"></script>
-    <script src="/js/perfect-scrollbar.min.js?1755003183"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1755003183"></script>
-    <script src="/js/jquery.sticky.js?1755003183"></script>
-    <script src="/js/featherlight.min.js?1755003183"></script>
-    <script src="/js/highlight.pack.js?1755003183"></script>
+    <script src="/js/clipboard.min.js?1755006736"></script>
+    <script src="/js/perfect-scrollbar.min.js?1755006736"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1755006736"></script>
+    <script src="/js/jquery.sticky.js?1755006736"></script>
+    <script src="/js/featherlight.min.js?1755006736"></script>
+    <script src="/js/highlight.pack.js?1755006736"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1755003183"></script>
-    <script src="/js/learn.js?1755003183"></script>
-    <script src="/js/hugo-learn.js?1755003183"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1755006736"></script>
+    <script src="/js/learn.js?1755006736"></script>
+    <script src="/js/hugo-learn.js?1755006736"></script>
 
-    <link href="/mermaid/mermaid.css?1755003183" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1755003183"></script>
+    <link href="/mermaid/mermaid.css?1755006736" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1755006736"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

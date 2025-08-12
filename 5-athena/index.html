@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.147.9">
@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Truy vấn dữ liệu với Amazon Athena :: AWS System Manager</title>
+    <title>Query Data with Amazon Athena :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1755003183" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1755003183" rel="stylesheet">
-    <link href="/css/hybrid.css?1755003183" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1755003183" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1755003183" rel="stylesheet">
-    <link href="/css/auto-complete.css?1755003183" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1755003183" rel="stylesheet">
-    <link href="/css/theme.css?1755003183" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1755003183" rel="stylesheet">
+    <link href="/css/nucleus.css?1755006736" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1755006736" rel="stylesheet">
+    <link href="/css/hybrid.css?1755006736" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1755006736" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1755006736" rel="stylesheet">
+    <link href="/css/auto-complete.css?1755006736" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1755006736" rel="stylesheet">
+    <link href="/css/theme.css?1755006736" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1755006736" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1755003183" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1755006736" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1755003183"></script>
+    <script src="/js/jquery-3.3.1.min.js?1755006736"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,18 +59,18 @@
 
 
 
-<script type="text/javascript" src="/%20js/lunr.min.js?1755003183"></script>
-<script type="text/javascript" src="/%20js/auto-complete.js?1755003183"></script>
+<script type="text/javascript" src="/%20js/lunr.min.js?1755006736"></script>
+<script type="text/javascript" src="/%20js/auto-complete.js?1755006736"></script>
 
 <script type="text/javascript">
     { { if hugo.IsMultilingual } }
-    var baseurl = "\/\/localhost:1313\/";
+    var baseurl = "\/";
     { { else } }
-    var baseurl = "\/\/localhost:1313\/";
+    var baseurl = "\/";
     { { end } }
 </script>
 
-<script type="text/javascript" src="/%20js/search.js?1755003183"></script>
+<script type="text/javascript" src="/%20js/search.js?1755006736"></script>
     
   </div>
 
@@ -288,6 +288,34 @@
     
     
     
+    
+
+
+
+
+
+
+
+<li data-nav-id="/2-prerequiste/2.3-download/" title="Download Resources" class="dd-item 
+        
+        
+        
+        ">
+  <a href="/2-prerequiste/2.3-download/">
+     <b> 2.3 </b> Download Resources
+    
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+  
+  
+</li>
+
+
+
+    
+    
+    
   </ul>
   
 </li>
@@ -303,13 +331,13 @@
 
 
 
-<li data-nav-id="/3-accessibilitytoinstances/" title="Xử lý và chuyển đổi dữ liệu với AWS Lambda" class="dd-item 
+<li data-nav-id="/3-accessibilitytoinstances/" title="Data Processing and Transformation with AWS Lambda" class="dd-item 
         
         
         
         ">
   <a href="/3-accessibilitytoinstances/">
-     <b> 3. </b> Xử lý và chuyển đổi dữ liệu với AWS Lambda
+     <b> 3. </b> Data Processing and Transformation with AWS Lambda
     
     <i class="fas fa-check read-icon"></i>
     
@@ -362,13 +390,13 @@
 
 
 
-<li data-nav-id="/3-accessibilitytoinstances/3.2-create-lambda/" title="Tạo Lambda Function để xử lý dữ liệu" class="dd-item 
+<li data-nav-id="/3-accessibilitytoinstances/3.2-create-lambda/" title="Create a Lambda Function for Data Processing" class="dd-item 
         
         
         
         ">
   <a href="/3-accessibilitytoinstances/3.2-create-lambda/">
-     <b> 3.2 </b> Tạo Lambda Function để xử lý dữ liệu
+     <b> 3.2 </b> Create a Lambda Function for Data Processing
     
     <i class="fas fa-check read-icon"></i>
     
@@ -390,13 +418,13 @@
 
 
 
-<li data-nav-id="/3-accessibilitytoinstances/3.3-config-lambda/" title="Tạo Lambda Function để xử lý dữ liệu" class="dd-item 
+<li data-nav-id="/3-accessibilitytoinstances/3.3-config-lambda/" title="Configure Lambda" class="dd-item 
         
         
         
         ">
   <a href="/3-accessibilitytoinstances/3.3-config-lambda/">
-     <b> 3.3 </b> Tạo Lambda Function để xử lý dữ liệu
+     <b> 3.3 </b> Configure Lambda
     
     <i class="fas fa-check read-icon"></i>
     
@@ -418,13 +446,13 @@
 
 
 
-<li data-nav-id="/3-accessibilitytoinstances/3.4-upload-file/" title="Tạo Lambda Function để xử lý dữ liệu" class="dd-item 
+<li data-nav-id="/3-accessibilitytoinstances/3.4-upload-file/" title="Upload Sample Files to Test Lambda" class="dd-item 
         
         
         
         ">
   <a href="/3-accessibilitytoinstances/3.4-upload-file/">
-     <b> 3.3 </b> Tạo Lambda Function để xử lý dữ liệu
+     <b> 3.4 </b> Upload Sample Files to Test Lambda
     
     <i class="fas fa-check read-icon"></i>
     
@@ -453,13 +481,13 @@
 
 
 
-<li data-nav-id="/4-glue-crawler/" title="Cấu hình AWS Glue Data Catalog và Crawler" class="dd-item 
+<li data-nav-id="/4-glue-crawler/" title="Configure AWS Glue Data Catalog and Crawler" class="dd-item 
         
         
         
         ">
   <a href="/4-glue-crawler/">
-     <b> 4. </b> Cấu hình AWS Glue Data Catalog và Crawler
+     <b> 4. </b> Configure AWS Glue Data Catalog and Crawler
     
     <i class="fas fa-check read-icon"></i>
     
@@ -479,13 +507,13 @@
 
 
 
-<li data-nav-id="/5-athena/" title="Truy vấn dữ liệu với Amazon Athena" class="dd-item 
+<li data-nav-id="/5-athena/" title="Query Data with Amazon Athena" class="dd-item 
         
         active
         
         ">
   <a href="/5-athena/">
-     <b> 5. </b> Truy vấn dữ liệu với Amazon Athena
+     <b> 5. </b> Query Data with Amazon Athena
     
     <i class="fas fa-check read-icon"></i>
     
@@ -505,13 +533,13 @@
 
 
 
-<li data-nav-id="/6-cloudwatch/" title="Giám sát quy trình với Amazon CloudWatch" class="dd-item 
+<li data-nav-id="/6-cloudwatch/" title="Monitor the Workflow with Amazon CloudWatch" class="dd-item 
         
         
         
         ">
   <a href="/6-cloudwatch/">
-     <b> 6. </b> Giám sát quy trình với Amazon CloudWatch
+     <b> 6. </b> Monitor the Workflow with Amazon CloudWatch
     
     <i class="fas fa-check read-icon"></i>
     
@@ -531,39 +559,13 @@
 
 
 
-<li data-nav-id="/7-cleanup/" title="Dọn dẹp tài nguyên" class="dd-item 
+<li data-nav-id="/7-cleanup/" title="Clean Up Resources" class="dd-item 
         
         
         
         ">
   <a href="/7-cleanup/">
-     <b> 7. </b> Dọn dẹp tài nguyên
-    
-    <i class="fas fa-check read-icon"></i>
-    
-  </a>
-  
-  
-</li>
-
-
-
-      
-      
-
-
-
-
-
-
-
-<li data-nav-id="/section-name/" title="Section-Names" class="dd-item 
-        
-        
-        
-        ">
-  <a href="/section-name/">
-    Section-Names
+     <b> 7. </b> Clean Up Resources
     
     <i class="fas fa-check read-icon"></i>
     
@@ -610,7 +612,7 @@
                 
                 
                 
-                <option id="en" value="//localhost:1313/5-athena/" selected>English</option>
+                <option id="en" value="/5-athena/" selected>English</option>
                 
                 
                 
@@ -624,7 +626,7 @@
                 
                 
                 
-                <option id="vi" value="//localhost:1313/vi/5-athena/">Tiếng Việt
+                <option id="vi" value="/vi/5-athena/">Tiếng Việt
                 </option>
                 
                 
@@ -654,32 +656,35 @@
     <section id="footer">
       <left>
     
-     <b> Workshop</b> <br>
-    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
-     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
-    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
-     
+    <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0"
+        title="Migrate" Alt="web counter" border="0" /></a> <br>
+    <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0"
+        title="Total CLoud Journey" Alt="web counter" border="0" />
+
 </left>
 <left>
     <br>
     <br>
-        <b> Last Updated </b> <br>
-        <i><font color=orange>30-01-2022</font></i>
-    </left>
-    <left>
-        <br>
-        <br>
-            <b> Team </b> <br>
-           
-            <i> <a href="https://www.linkedin.com/in/sutrinh/"  style="color:orange">Sử Trịnh  </a> <br>
-                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
-                <a href="https://www.linkedin.com/in/hiepnguyendt"  style="color:orange">Thanh Hiệp </a>
-               
-        </i>
-        </left>
+    <b> Last Updated </b> <br>
+    <i>
+        <font color=orange>12-08-2025</font>
+    </i>
+</left>
+<left>
+    <br>
+    <br>
+    <b> Team </b> <br>
+
+    <i> <a href="https://www.linkedin.com/in/sutrinh/" style="color:orange">Sử Trịnh </a> <br>
+        <a href="https://www.linkedin.com/in/jotaguy" style="color:orange">Gia Hưng </a> <br>
+        <a href="https://www.linkedin.com/in/hiepnguyendt" style="color:orange">Thanh Hiệp </a>
+
+    </i>
+</left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
-
     </section>
   </div>
 </nav>
@@ -713,7 +718,7 @@
             
           
           
-            <a href='/'>Session Management</a> > Truy vấn dữ liệu với Amazon Athena
+            <a href='/'>Serverless File Processing with Amazon Athena and AWS Lambda</a> > Query Data with Amazon Athena
           
         
           
@@ -726,7 +731,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#mục-tiêu">Mục tiêu</a></li>
+    <li><a href="#objective">Objective</a></li>
   </ul>
 </nav>
     </div>
@@ -744,7 +749,7 @@
           
             <h1>
               
-              Truy vấn dữ liệu với Amazon Athena
+              Query Data with Amazon Athena
             </h1>
           
 
@@ -752,55 +757,49 @@
 
 
 
-	<h2 id="mục-tiêu">Mục tiêu</h2>
+	<h2 id="objective">Objective</h2>
 <ul>
-<li>Cấu hình <strong>Amazon Athena</strong> để truy vấn dữ liệu đã xử lý trong <strong>S3 Processed Bucket</strong>.</li>
-<li>Thực hiện các truy vấn SQL mẫu để phân tích dữ liệu log.</li>
-<li>Cấu hình <strong>Partition Projection</strong> để tối ưu chi phí và tốc độ truy vấn.</li>
+<li>Configure <strong>Amazon Athena</strong> to query processed data stored in the <strong>S3 Processed Bucket</strong>.</li>
+<li>Run sample SQL queries to analyze log data.</li>
+<li>Configure <strong>Partition Projection</strong> to optimize query cost and performance.</li>
 </ul>
 <hr>
 <ol>
 <li>
-<p><strong>Mở Athena và cấu hình kết quả truy vấn</strong></p>
+<p><strong>Open Athena and Configure Query Results Location</strong></p>
 <ul>
-<li>Vào <strong>AWS Console</strong> → chọn <strong>Athena</strong> → <strong>Query editor</strong>.
+<li>In the <strong>AWS Console</strong>, go to <strong>Athena</strong> → <strong>Query editor</strong>.<br>
 <img src="/images/5.athena/01-athena.png" alt="Athena Settings"></li>
-<li>Ở góc trên bên phải, click biểu tượng <strong>Settings</strong> → <strong>Manage</strong>.
+<li>In the top right corner, click the <strong>Settings</strong> icon → <strong>Manage</strong>.<br>
 <img src="/images/5.athena/02-athena.png" alt="Athena Settings"></li>
-<li>Tại <strong>Location of query result</strong>, nhập:
+<li>Under <strong>Location of query result</strong>, enter:
 <pre tabindex="0"><code>s3://edu-logs-processed-&lt;account&gt;/athena-results/
 </code></pre></li>
-<li>Click <strong>Save</strong> để lưu cấu hình.
+<li>Click <strong>Save</strong> to store the configuration.<br>
 <img src="/images/5.athena/03-athena.png" alt="Athena Settings"></li>
 </ul>
 </li>
 <li>
-<p><strong>Chọn Data source và Database</strong></p>
+<p><strong>Select Data Source and Database</strong></p>
 <ul>
-<li>
-<p><strong>Data source</strong>: chọn <code>AwsDataCatalog</code>.</p>
-</li>
-<li>
-<p><strong>Database</strong>: chọn <code>edu_logs_db</code>.</p>
-</li>
-<li>
-<p>Trong <strong>Tables</strong>, chọn bảng <code>logs_edu_logs_processed</code> để kiểm tra schema.</p>
-<p><img src="/images/5.athena/04-athena.png" alt="Athena Settings"></p>
-</li>
+<li><strong>Data source</strong>: Select <code>AwsDataCatalog</code>.</li>
+<li><strong>Database</strong>: Select <code>edu_logs_db</code>.</li>
+<li>Under <strong>Tables</strong>, choose the table <code>logs_edu_logs_processed</code> to review its schema.<br>
+<img src="/images/5.athena/04-athena.png" alt="Athena Settings"></li>
 </ul>
 </li>
 <li>
-<p><strong>Chạy các truy vấn SQL mẫu</strong></p>
+<p><strong>Run Sample SQL Queries</strong></p>
 <ul>
 <li>
-<p><strong>Xem 10 bản ghi đầu tiên:</strong></p>
+<p><strong>View the first 10 records:</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> 
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">&#34;edu_logs_db&#34;</span>.<span style="color:#e6db74">&#34;logs_edu_logs_processed_&lt;account&gt;&#34;</span> 
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">10</span>;
 </span></span></code></pre></div><p><img src="/images/5.athena/05-athena.png" alt="Athena Settings"></p>
 </li>
 <li>
-<p><strong>Top hoạt động theo người dùng:</strong></p>
+<p><strong>Top activities by user:</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> user_id, <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">AS</span> activity_count
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">&#34;edu_logs_db&#34;</span>.<span style="color:#e6db74">&#34;logs_edu_logs_processed_&lt;account&gt;&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">year</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2025</span> <span style="color:#66d9ef">AND</span> <span style="color:#66d9ef">month</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
@@ -809,7 +808,7 @@
 </span></span></code></pre></div><p><img src="/images/5.athena/06-athena.png" alt="Athena Settings"></p>
 </li>
 <li>
-<p><strong>Thời lượng học trung bình theo khoá học:</strong></p>
+<p><strong>Average learning duration by course:</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> course_id,
 </span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">AVG</span>(<span style="color:#66d9ef">CAST</span>(duration_sec <span style="color:#66d9ef">AS</span> DOUBLE)) <span style="color:#66d9ef">AS</span> avg_duration_sec
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">&#34;edu_logs_db&#34;</span>.<span style="color:#e6db74">&#34;logs_edu_logs_processed_&lt;account&gt;&#34;</span>
@@ -821,10 +820,10 @@
 </ul>
 </li>
 <li>
-<p><strong>(Tuỳ chọn) Cấu hình Partition Projection để tối ưu truy vấn</strong></p>
+<p><strong>(Optional) Configure Partition Projection for Query Optimization</strong></p>
 <ul>
-<li>Trong <strong>Athena</strong> → <strong>Tables</strong> → chọn bảng <code>logs_edu_logs_processed</code> → <strong>Edit table</strong>.</li>
-<li>Thêm các <strong>Parameters</strong> sau:
+<li>In <strong>Athena</strong> → <strong>Tables</strong> → select the table <code>logs_edu_logs_processed</code> → <strong>Edit table</strong>.</li>
+<li>Add the following <strong>Parameters</strong>:
 <pre tabindex="0"><code>projection.enabled = true
 projection.year.type = integer
 projection.year.range = 2024,2030
@@ -836,11 +835,11 @@ projection.day.range = 1,31
 projection.day.digits = 2
 storage.location.template = s3://edu-logs-processed-&lt;account&gt;/year=${year}/month=${month}/day=${day}/
 </code></pre></li>
-<li>Lưu thay đổi.</li>
+<li>Save the changes.</li>
 </ul>
 <blockquote>
-<p><strong>Lưu ý:</strong> Khi sử dụng Partition Projection, trong truy vấn <strong>bắt buộc</strong> lọc theo <code>year</code>, <code>month</code>, <code>day</code> để hạn chế lượng dữ liệu quét và giảm chi phí.</p></blockquote>
-<p>Ví dụ:</p>
+<p><strong>Note:</strong> When using Partition Projection, queries <strong>must</strong> filter by <code>year</code>, <code>month</code>, and <code>day</code> to reduce the amount of data scanned and lower costs.</p></blockquote>
+<p>Example:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">&#34;edu_logs_db&#34;</span>.<span style="color:#e6db74">&#34;logs_edu_logs_processed&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">year</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2025</span> <span style="color:#66d9ef">AND</span> <span style="color:#66d9ef">month</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span> <span style="color:#66d9ef">AND</span> <span style="color:#66d9ef">day</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>;
@@ -997,6 +996,22 @@ storage.location.template = s3://edu-logs-processed-&lt;account&gt;/year=${year}
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1014,38 +1029,6 @@ storage.location.template = s3://edu-logs-processed-&lt;account&gt;/year=${year}
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1079,6 +1062,38 @@ storage.location.template = s3://edu-logs-processed-&lt;account&gt;/year=${year}
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1122,22 +1137,6 @@ storage.location.template = s3://edu-logs-processed-&lt;account&gt;/year=${year}
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1175,10 +1174,10 @@ storage.location.template = s3://edu-logs-processed-&lt;account&gt;/year=${year}
 	 
 	 
 		
-			<a class="nav nav-prev" href="/4-glue-crawler/" title="Cấu hình AWS Glue Data Catalog và Crawler"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/4-glue-crawler/" title="Configure AWS Glue Data Catalog and Crawler"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/6-cloudwatch/" title="Giám sát quy trình với Amazon CloudWatch" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/6-cloudwatch/" title="Monitor the Workflow with Amazon CloudWatch" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1188,19 +1187,19 @@ storage.location.template = s3://edu-logs-processed-&lt;account&gt;/year=${year}
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1755003183"></script>
-    <script src="/js/perfect-scrollbar.min.js?1755003183"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1755003183"></script>
-    <script src="/js/jquery.sticky.js?1755003183"></script>
-    <script src="/js/featherlight.min.js?1755003183"></script>
-    <script src="/js/highlight.pack.js?1755003183"></script>
+    <script src="/js/clipboard.min.js?1755006736"></script>
+    <script src="/js/perfect-scrollbar.min.js?1755006736"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1755006736"></script>
+    <script src="/js/jquery.sticky.js?1755006736"></script>
+    <script src="/js/featherlight.min.js?1755006736"></script>
+    <script src="/js/highlight.pack.js?1755006736"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1755003183"></script>
-    <script src="/js/learn.js?1755003183"></script>
-    <script src="/js/hugo-learn.js?1755003183"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1755006736"></script>
+    <script src="/js/learn.js?1755006736"></script>
+    <script src="/js/hugo-learn.js?1755006736"></script>
 
-    <link href="/mermaid/mermaid.css?1755003183" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1755003183"></script>
+    <link href="/mermaid/mermaid.css?1755006736" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1755006736"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
